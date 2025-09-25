@@ -45,7 +45,7 @@ function QuoteGenerator() {
     setQuote("");
     setAuthor("");
     try {
-      const { data } = await axios.post("http://localhost:5000/api/quotes", {
+      const { data } = await axios.post("https://quote-generator-app-dw77.onrender.com/api/quotes", {
         category,
       });
       let rawQuote = data.quote || "";

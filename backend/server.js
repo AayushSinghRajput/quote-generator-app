@@ -6,7 +6,13 @@ import quoteRoutes from "./routes/quoteRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+const FRONTEND_URL = "https://quote-generator-app-teal.vercel.app";
+app.use(cors({
+  origin: FRONTEND_URL, 
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
