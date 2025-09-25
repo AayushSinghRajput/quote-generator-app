@@ -1,7 +1,11 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+# Node modules
 node_modules/
+
+# Environment variables
+.env
 /.pnp
 .pnp.js
 
